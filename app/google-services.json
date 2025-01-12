@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "402433791409",
+    "project_id": "pammobile-6088b",
+    "storage_bucket": "pammobile-6088b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402433791409:android:2fcb6dda5b2ac98292d990",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYSVRHxYHD8smWsfzAdowfl0RfTaHOXW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
