@@ -2,7 +2,6 @@ package com.example.firebase.ui.pages
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -110,18 +109,10 @@ fun HomeStatus(
                 listMhs = homeUiState.data,
                 modifier = modifier.fillMaxWidth(),
                 onClick = { onDetailClick(it) },
-                onDelete = { onDeleteClick(it) }
+                onDelete = { mahasiswa ->
+                    deleteConfirm = mahasiswa
+                }
             )
-            deleteConfirm?.let { data ->
-                DeleteConfirmationDialog(
-                    onDeleteConfirm = {
-                        onDeleteClick(data)
-                        deleteConfirm= null
-                    },
-                    onDeleteCancel = {
-                        deleteConfirm = null
-                    })
-            }
         }
         is HomeUiState.Error -> {
             OnError(
@@ -130,6 +121,16 @@ fun HomeStatus(
                 modifier = modifier.fillMaxSize()
             )
         }
+    }
+    deleteConfirm?.let { data ->
+        DeleteConfirmationDialog(
+            onDeleteConfirm = {
+                onDeleteClick(data)
+                deleteConfirm= null
+            },
+            onDeleteCancel = {
+                deleteConfirm = null
+            })
     }
 }
 
