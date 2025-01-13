@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.firebase" />
-                  <option name="mobileSdkAppId" value="1:402433791409:android:2fcb6dda5b2ac98292d990" />
-                  <option name="projectId" value="pammobile-6088b" />
-                  <option name="projectNumber" value="402433791409" />
+                  <option name="mobileSdkAppId" value="1:643120323136:android:2dd1aa6c009ccde1e39da5" />
+                  <option name="projectId" value="pammobile-3a573" />
+                  <option name="projectNumber" value="643120323136" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
