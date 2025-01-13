@@ -27,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.firebase.ui.viewmodel.FormState
 import com.example.firebase.ui.viewmodel.InsertViewModel
@@ -168,8 +169,7 @@ fun FormMahasiswa(
     val kelas = listOf("A","B","C","D")
 
     Column (
-        modifier = modifier
-            .fillMaxWidth()
+        modifier = modifier,
     ) {
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
@@ -180,12 +180,12 @@ fun FormMahasiswa(
             label = {Text("Nama")},
             isError = errorState.nama != null,
             placeholder = { Text("Masukkan nama")},
+            singleLine = true
         )
         Text(
             text = errorState.nama ?: "",
-            color = Color.Red
+            color = Color.Red,
         )
-
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
             value = mahasiswaEvent.nim,
@@ -199,13 +199,11 @@ fun FormMahasiswa(
         )
         Text(
             text = errorState.nim ?: "",
-            color = Color.Red
+            color = Color.Red,
         )
-
-        Spacer(modifier = Modifier.height(16.dp))
         Text(text = "gender")
         Row(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
         ) {
             gender.forEach { jk ->
                 Row (
@@ -228,7 +226,6 @@ fun FormMahasiswa(
             text = errorState.gender ?: "",
             color = Color.Red
         )
-
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
             value = mahasiswaEvent.alamat,
@@ -241,10 +238,8 @@ fun FormMahasiswa(
         )
         Text(
             text = errorState.alamat ?: "",
-            color = Color.Red
+            color = Color.Red,
         )
-
-        Spacer(modifier = Modifier.height(16.dp))
         Text (text = "Kelas")
         Row {
 
@@ -265,7 +260,7 @@ fun FormMahasiswa(
         }
         Text(
             text = errorState.kelas ?: "",
-            color = Color.Red
+            color = Color.Red,
         )
 
         OutlinedTextField(
@@ -281,6 +276,49 @@ fun FormMahasiswa(
         )
         Text(
             text = errorState.angkatan ?: "",
+            color = Color.Red,
+        )
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.judulskripsi,
+            onValueChange = {
+                onValueChange (mahasiswaEvent.copy(judulskripsi = it))
+            },
+            label = {Text("Judul Skripsi")},
+            isError = errorState.judulskripsi != null,
+            placeholder = { Text("Masukkan Judul Skripsi")},
+        )
+        Text(
+            text = errorState.judulskripsi ?: "",
+            color = Color.Red
+        )
+        Spacer(modifier = Modifier.height(2.dp))
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.dospem1,
+            onValueChange = {
+                onValueChange (mahasiswaEvent.copy(dospem1 = it))
+            },
+            label = {Text("Dospem1")},
+            isError = errorState.dospem1 != null,
+            placeholder = { Text("Masukkan Dospem1")},
+        )
+        Text(
+            text = errorState.dospem1 ?: "",
+            color = Color.Red
+        )
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
+            value = mahasiswaEvent.dospem2,
+            onValueChange = {
+                onValueChange (mahasiswaEvent.copy(dospem2 = it))
+            },
+            label = {Text("Dospem2")},
+            isError = errorState.dospem2 != null,
+            placeholder = { Text("Masukkan Dospem2")},
+        )
+        Text(
+            text = errorState.dospem2 ?: "",
             color = Color.Red
         )
     }
