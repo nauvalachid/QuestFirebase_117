@@ -27,3 +27,8 @@
 Ｄａｔａ Ｂｅｒｈａｓｉｌ Ｄｉｈａｐｕｓ
 
 ![WhatsApp Image 2025-01-13 at 12 10 29_695f248e](https://github.com/user-attachments/assets/54ee63c6-11c6-4ab2-bdba-0c2a6a1f3d7b)
+
+Hasil Tambahan UCP
+
+![image](https://github.com/user-attachments/assets/bf6ad0dd-7eb9-49f9-af92-671e403079a5)
+
